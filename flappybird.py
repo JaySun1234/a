@@ -1,6 +1,8 @@
 import pygame
 
 def main():
+    print("Hello World")
+    
     pygame.init()
     screen = pygame.display.set_mode((1280, 720))
     clock = pygame.time.Clock()
