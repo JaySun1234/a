@@ -27,6 +27,16 @@ def main():
         if keys[pygame.K_w]:
             player_pos.y -= 300 * dt
 
+        # Adding Borders to the Player's Movement
+        if player_pos.y < 0:
+            player_pos.y += 300 * dt
+        if player_pos.x < 0:
+            player_pos.x += 300 * dt
+        if player_pos.y > screen.get_height():
+            player_pos.y -= 300 * dt
+        if player_pos.x > screen.get_width():
+            player_pos.x -= 300 * dt
+
         # flip() the display to put your work on screen
         pygame.display.flip()
 
